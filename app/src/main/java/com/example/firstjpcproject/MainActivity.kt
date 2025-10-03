@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.firstjpcproject.`1_FundamentalConcept`.AccessRes
 import com.example.firstjpcproject.`1_FundamentalConcept`.Greeting
 import com.example.firstjpcproject.`2_CoreConcept`.SimpleText
+import com.example.firstjpcproject.`2_CoreConcept`.TextInput
 import com.example.firstjpcproject.ui.theme.FirstJPCProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             FirstJPCProjectTheme {
-                SimpleText()
+                TextInput()
             }
         }
     }
