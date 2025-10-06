@@ -21,58 +21,71 @@ import androidx.compose.ui.unit.sp
 import com.example.firstjpcproject.R
 
 @Composable
-fun SimpleText(){
-    Text(text = stringResource(R.string.person) , color = colorResource(R.color.white), fontSize = 20.sp)
+fun SimpleText() {
+  Text(
+      text = stringResource(R.string.person),
+      color = colorResource(R.color.white),
+      fontSize = 20.sp,
+  )
 }
-val rainbowColors = listOf(
-    Color.Red,
-    Color.Yellow,
-    Color.Green,
-    Color.Cyan,
-    Color.Blue,
-    Color.Magenta,
-);
+
+val rainbowColors =
+    listOf(
+        Color.Red,
+        Color.Yellow,
+        Color.Green,
+        Color.Cyan,
+        Color.Blue,
+        Color.Magenta,
+    )
+
 @Composable
-fun RainbowText(){
-    // how to use rainbow text in jetpack compose
-    Box(modifier = Modifier.fillMaxSize().background(color = Color.Magenta),
-        contentAlignment = Alignment.Center
-    ) {
-       Text(text = buildAnnotatedString {
-           append(text = "hello")
-          withStyle(
-              SpanStyle(
-                  brush = Brush.linearGradient(colors = rainbowColors)
-              )
-          ){
-              append(text = " how are you ")
-          }
-           append(text = "parth")
-       })
-    }
+fun RainbowText() {
+  // how to use rainbow text in jetpack compose
+  Box(
+      modifier = Modifier.fillMaxSize().background(color = Color.Magenta),
+      contentAlignment = Alignment.Center,
+  ) {
+    Text(
+        text =
+            buildAnnotatedString {
+              append(text = "hello")
+              withStyle(SpanStyle(brush = Brush.linearGradient(colors = rainbowColors))) {
+                append(text = " how are you ")
+              }
+              append(text = "parth")
+            }
+    )
+  }
 }
 
 @Composable
-fun OverFlowText(){
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-        Text(
-            text = "hey there I am trying to learn jetpack compose and I am enjoying it".repeat(50),//in this line .repeat() method is  use to repeat this text n times
- maxLines = 2, fontSize = 40.sp,
-            overflow = TextOverflow.Ellipsis
-        )
-    }
+fun OverFlowText() {
+  Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+    Text(
+        text =
+            "hey there I am trying to learn jetpack compose and I am enjoying it"
+                .repeat(50), // in this line .repeat() method is  use to repeat this text n times
+        maxLines = 2,
+        fontSize = 40.sp,
+        overflow = TextOverflow.Ellipsis,
+    )
+  }
 }
 
 @Composable
-fun MarqueeText(){
-    //how to scroll a text automatically
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-        Text(text = "hey there I am trying to learn jetpack compose and I am enjoying it ", modifier = Modifier.basicMarquee())
-    }
+fun MarqueeText() {
+  // how to scroll a text automatically
+  Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+    Text(
+        text = "hey there I am trying to learn jetpack compose and I am enjoying it ",
+        modifier = Modifier.basicMarquee(),
+    )
+  }
 }
 
 @Preview(showSystemUi = true)
 @Composable
-fun MyPreview(){
-    OverFlowText()
+fun MyPreview() {
+  OverFlowText()
 }
