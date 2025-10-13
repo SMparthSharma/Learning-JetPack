@@ -4,8 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.example.firstjpcproject.`11_Menus`.SideMenu
 import com.example.firstjpcproject.`6_Card`.ElevatedCard
 import com.example.firstjpcproject.`7_CheckBox`.MyCheckBox
+import com.example.firstjpcproject.`8_Chip`.AllChip
 import com.example.firstjpcproject.ui.theme.FirstJPCProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,7 +16,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             FirstJPCProjectTheme {
-                MyCheckBox()
+                SideMenu()
             }
         }
     }
