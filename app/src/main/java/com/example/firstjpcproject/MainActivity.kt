@@ -9,6 +9,7 @@ import com.example.firstjpcproject.`6_Card`.ElevatedCard
 import com.example.firstjpcproject.`7_CheckBox`.MyCheckBox
 import com.example.firstjpcproject.`8_Chip`.AllChip
 import com.example.firstjpcproject.ui.theme.FirstJPCProjectTheme
+import com.example.newjetpackcomposecourse.`16_SearchBar`.SearchScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             FirstJPCProjectTheme {
-                SideMenu()
+                SearchScreen()
             }
         }
     }
